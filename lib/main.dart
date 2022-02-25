@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -32,7 +33,7 @@ class _DicePageState extends State<DicePage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  numberOnLeft = 3;
+                  numberOnLeft = Random().nextInt(6) + 1;
                 });
               },
               style: TextButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 16.0)),
@@ -43,7 +44,7 @@ class _DicePageState extends State<DicePage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  numberOnRight = 4;
+                  numberOnRight = Random().nextInt(6) + 1;
                 });
               },
               style: TextButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 16.0)),
